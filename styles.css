@@ -4,6 +4,10 @@ img {
     display: block;
 }
 
+a{
+    color:white;
+}
+
 .top-row {
     display: block;
     background-color: #333333;
@@ -15,8 +19,8 @@ img {
 
 .top-box {
     display: inline-block;
-    width: 5%;
-    min-width: 60px;
+    width: 10%;
+    min-width: 100px;
     max-width: 200px;
     color: white;
     border-right: thin solid white;
@@ -57,7 +61,6 @@ img {
     width: 25%;
 }
 
-/* Основной контент */
 .main-content {
     margin: 0 auto;
     text-align: center;
