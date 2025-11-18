@@ -10,6 +10,11 @@
     border-radius: 8px;
 }
 
+a{
+    text-decoration-color: white;
+    color:aqua
+}
+
 .menu {
     margin: auto;
     flex: 3;
