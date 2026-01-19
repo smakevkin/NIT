@@ -1,0 +1,67 @@
+extends ../components/header
+
+block content
+  .page.page--table
+    .page__container
+      h1.page__title.table-title Список пород собак
+      fieldset.page__filters.filters
+        legend Фильтры для поиска
+        
+        .filters__group
+          label.filters__label Размер породы:
+          select.filters__control(id="sizeFilter")
+            option(value="all") Все размеры
+            option(value="small") Маленькие
+            option(value="medium") Средние
+            option(value="large") Крупные
+            option(value="giant") Гигантские
+
+        .filters__group
+          label.filters__label Тип шерсти:
+          select.filters__control(id="coatFilter")
+            option(value="all") Любой тип
+            option(value="short") Короткая
+            option(value="long") Длинная
+            option(value="curly") Курчавая
+            option(value="wire") Жесткая
+            option(value="hairless") Без шерсти
+
+        .filters__group
+          label.filters__label Назначение:
+          select.filters__control(id="purposeFilter")
+            option(value="all") Все назначения
+            option(value="companion") Компаньон
+            option(value="hunting") Охотничья
+            option(value="working") Рабочая
+            option(value="guard") Охранная
+            option(value="shepherd") Пастушья
+
+        .filters__group
+          label.filters__label Уровень активности:
+          select.filters__control(id="activityFilter")
+            option(value="all") Любой уровень
+            option(value="low") Низкий
+            option(value="medium") Средний
+            option(value="high") Высокий
+
+        .filters__group
+          label.filters__label Подходит для квартиры:
+          select.filters__control(id="apartmentFilter")
+            option(value="all") Все
+            option(value="yes") Да
+            option(value="no") Нет
+
+      .page__table.dogs-table
+        table.dogs-table__table
+          thead.dogs-table__head
+            tr.dogs-table__row
+              th.dogs-table__cell №
+              th.dogs-table__cell Название породы
+              th.dogs-table__cell Размер
+              th.dogs-table__cell Тип шерсти
+              th.dogs-table__cell Назначение
+              th.dogs-table__cell Активность
+              th.dogs-table__cell Для квартиры
+              th.dogs-table__cell Страна происхождения
+              th.dogs-table__cell Продолжительность жизни
+          tbody.dogs-table__body

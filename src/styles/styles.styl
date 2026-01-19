@@ -1,0 +1,279 @@
+// Шапка сайта
+.header__container
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  width 90%
+  border solid thin grey
+  margin auto
+  font-size 1.5em
+  border-radius 8px
+
+.header__menu
+  margin auto
+  flex 3
+  text-align center
+
+.header__menu-item
+  display inline-block
+  color #2196F3
+  padding 10px
+  border-radius 8px
+
+.header__menu-item:hover
+  background-color #2196F3
+  color white
+
+.header__menu-link
+  text-decoration-color white
+  color aqua
+
+.header__search-field
+  margin 10px 10px
+  display inline-block
+  text-align center
+
+.header__search-input
+  width 200px
+  height 30px
+  font-size 16px
+
+.header__search-button
+  margin 10px
+  display inline-block
+  border-radius 8px
+  padding 5px
+  background-color #2196F3
+  color white
+
+// Основной контент
+.main__container
+  width 100%
+
+.main__banner
+  display grid
+  width 85%
+  padding-top 10px
+  gap 5px
+  grid-template-columns 1fr 1fr 1fr 1fr
+  grid-template-rows 150px 150px
+  grid-template-areas "item-1 item-2 item-3 item-6" "item-1 item-4 item-5 item-6"
+  margin 0 auto
+
+@media(max-width:1000px)
+  .main__banner
+    grid-template-columns 1fr
+    grid-template-areas "item-1" "item-2" "item-3" "item-4" "item-5" "item-6"
+
+.main__banner-item--1
+  grid-area item-1
+
+.main__banner-item--2
+  grid-area item-2
+
+.main__banner-item--3
+  grid-area item-3
+
+.main__banner-item--4
+  grid-area item-4
+
+.main__banner-item--5
+  grid-area item-5
+
+.main__banner-item--6
+  grid-area item-6
+
+.main__banner-image
+  width 100%
+  height 100%
+  object-fit fill
+
+.main__items--small
+  display flex
+  justify-content space-evenly
+  width 85%
+  height 20%
+  padding-top 10px
+  margin 0 auto
+
+.main__items--small .main__item
+  border solid thin black
+  text-wrap wrap
+  max-width 40%
+  min-width 10%
+  padding 10px
+  text-align center
+  display block
+
+.main__items--small .item__image
+  height 80px
+  width auto
+
+@media(max-width:1000px)
+  .main__items--small
+    flex-direction column
+    gap 10px
+    align-items center
+
+  .main__items--small .main__item
+    min-width 40%
+
+.main__items--big
+  display flex
+  justify-content space-between
+  width 80%
+  height 40%
+  padding-top 10px
+  margin 0 auto
+
+.main__items--big .main__item
+  background-color #2196F3
+  text-wrap wrap
+  width 24%
+  display block
+  text-align center
+
+.main__items--big .item__image
+  max-width 20%
+  height 200px
+  min-width 80%
+  border-radius 20px
+  padding 10px
+  display block
+  margin 0 auto
+
+.main__items--big .item__title, .main__items--big .item__description
+  padding 10px
+
+@media(max-width:1000px)
+  .main__items--big
+    flex-direction column
+    gap 10px
+    align-items center
+
+  .main__items--big .main__item
+    width 80%
+
+.item__image
+  width auto
+  height auto
+
+.item__title
+  margin 0
+
+.item__description
+  margin 0
+
+.item__more
+  margin 0
+
+.footer__content
+  text-align center
+
+.footer__text
+  margin 0
+
+.page__container
+  width 100%
+  padding 20px
+
+.page__title
+  margin 0 0 20px 0
+  text-align center
+  color #2c3e50
+  font-size 2.2em
+  font-weight 600
+
+.page__image-container
+  text-align center
+  margin-bottom 20px
+
+.page__image
+  max-width 100%
+  height auto
+
+.page__content
+  line-height 1.6
+
+.page__paragraph
+  margin 0 0 10px 0
+
+.page--table .page__container
+  padding 0
+
+.page__filters
+  border 1px solid #dee2e6
+  border-radius 8px
+  padding 20px
+  margin 20px auto
+  max-width 800px
+
+.page__filters legend
+  font-weight 600
+  color #495057
+  font-size 1.1em
+
+.page__table
+  margin 20px auto
+  max-width 95%
+  overflow-x auto
+
+.filters__group
+  margin-bottom 15px
+  display flex
+  flex-wrap wrap
+  align-items center
+  gap 10px
+
+.filters__label
+  min-width 180px
+  font-weight 500
+  color #495057
+
+.filters__control
+  padding 8px 12px
+  border 1px solid #ced4da
+  border-radius 4px
+  background white
+  font-size 14px
+  color #495057
+  min-width 200px
+
+.dogs-table__table
+  width 100%
+  background white
+  border-radius 8px
+
+.dogs-table__head
+  background #676767
+  color white
+
+.dogs-table__head .dogs-table__row .dogs-table__cell
+  padding 12px 15px
+  text-align left
+  font-weight 600
+  font-size 0.95em
+  text-transform uppercase
+  letter-spacing 0.5px
+
+.dogs-table__body .dogs-table__row
+  border-bottom 1px solid #e9ecef
+
+.dogs-table__body .dogs-table__row .dogs-table__cell
+  padding 10px 15px
+  font-size 0.95em
+  color #495057
+
+@media (max-width: 768px)
+  .filters__group
+    flex-direction column
+    align-items flex-start
+
+  .filters__label
+    min-width auto
+
+  .filters__control
+    min-width 100%
+
+  .page__title
+    font-size 1.8em

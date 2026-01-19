@@ -1,0 +1,67 @@
+extends ../components/header
+
+block content
+  .main
+    .main__container
+      .main__banner 
+        .main__banner-item.main__banner-item--1
+          img.main__banner-image(src= require("../img/mops.png"))
+        .main__banner-item.main__banner-item--2
+          img.main__banner-image(src= require("../img/bully.png"))
+        .main__banner-item.main__banner-item--3
+          img.main__banner-image(src= require("../img/chihuahua.png"))
+        .main__banner-item.main__banner-item--4
+          img.main__banner-image(src= require("../img/cnHohol.png"))
+        .main__banner-item.main__banner-item--5
+          img.main__banner-image(src= require("../img/frBulldog.png"))
+        .main__banner-item.main__banner-item--6
+          img.main__banner-image(src= require("../img/gerOvcharka.png"))
+      .main__items.main__items--small 
+        .main__item.item
+          img.item__image(src= require("../img/goldRetriver.png"))
+          h3.item__title Золотистый ретривер
+          p.item__description Текст
+        .main__item.item
+          img.item__image(src= require("../img/maltBolonka.png"))
+          h3.item__title Мальтийская болонка
+          p.item__description Текст
+      .main__items.main__items--big 
+        .main__item.item
+          h3.item__title Английский бульдог
+          p.item__description
+            | Англи́йский бульдо́г (также бульдог, англ. bulldog, дословно: «бычья собака») —
+            | короткошёрстная порода собак типа мастифов. По способу использования стандарт относит породу к
+            | собакам-телохранителям и компаньонам[1].
+            | Современные английские бульдоги выведены во второй половине XIX века, в основе породы —
+            | староанглийский бульдог, травильная порода собак, ныне вымершая.
+          img.item__image(src= require("../img/enBulldog.png"))
+          div.item__more(style="padding:10px; text-align: right;text-decoration:underline; ")
+            | Подробнее
+        .main__item.item
+          img.item__image(src= require("../img/pudel.png"))
+          h3.item__title Пудель
+          p.item__description
+            | Пу́дель (нем. Pudel, от puddeln — «плескаться в воде») — порода собак. Изначально
+            | пудель являлся рабочей собакой, в частности использовался на охоте. Современные пудели —
+            | преимущественно декоративные собаки.
+          div.item__more(style="padding:10px; text-align: left;text-decoration:underline;")
+            | Подробнее
+        .main__item.item
+          h3.item__title Лабрадор ретриве
+          p.item__description
+            | Лабрадо́р-ретри́вер (англ. labrador retriever) — порода собак. Первоначально была выведена в качестве
+            | охотничьей подружейной собаки. Лабрадоры используются на охоте, в качестве собак-поводырей,
+            | собак-спасателей, но главным образом — в роли компаньонов. Порода берёт своё начало на острове
+            | Ньюфаундленд на восточном побережье Канады.
+          img.item__image(src= require("../img/labradorRetr.png"))
+          div.item__more(style="padding:10px; text-align: right;text-decoration:underline;")
+            | Подробнее
+      .main__items.main__items--small.small-items
+        .main__item.item
+          img.item__image(src= require("../img/alaskaPuffer.png"))
+          h3.item__title Аляскинский маламут
+          p.item__description Текст
+        .main__item.item
+          img.item__image(src= require("../img/taksa.png"))
+          h3.item__title Такса
+          p.item__description Текст

@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Собачки
+  body
+    .header
+      .header__container
+        .header__menu 
+          .header__menu-item
+            a.header__menu-link(href="index.html") Главная
+          .header__menu-item
+            a.header__menu-link(href="bully.html") Булли
+          .header__menu-item
+            a.header__menu-link(href="cnHohol.html") Китайская Хохолка
+          .header__menu-item
+            a.header__menu-link(href="table.html") Таблица
+        .header__search 
+          .header__search-field
+            input.header__search-input(type="text", name="Найти", placeholder="Найти")
+          .header__search-button
+            | Поиск
+    block content
+    .footer
+      .footer__content
+        p.footer__text Макевкин СС Б9123-02.03.03тп
+    script(src="../js/index.js")
+    script(src="../js/script.js")
