@@ -1,0 +1,86 @@
+body {
+    font-size: 18px;
+}
+
+.task {
+    display: inline-block;
+    padding: 20px 24px;
+    background: #fff;
+    min-width: 900px;
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic-caption {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.input form p {
+    margin: 8px 0;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-top: 12px !important;
+}
+
+.input label {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.input input[type="number"] {
+    width: 140px;
+    font-size: 16px;
+    padding: 4px 6px;
+}
+
+.input select#formType {
+    font-size: 16px;
+    padding: 4px 6px;
+}
+
+.input input[type="button"] {
+    font-size: 15px;
+    padding: 5px 14px;
+    cursor: pointer;
+}
+
+#operations {
+    margin-top: 4px;
+    font-size: 17px;
+    width: 260px;
+}
+
+#output {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: #e8e8e8;
+    min-height: 60px;
+    font-size: 18px;
+}
+
+#output p {
+    margin: 6px 0;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.ops-error {
+    color: red;
+}

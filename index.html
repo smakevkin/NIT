@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="task">
+
+    <div class="top">
+
+      <div class="picture">
+        <svg width="300" height="240" xmlns="http://www.w3.org/2000/svg">
+          <line x1="30" y1="120" x2="278" y2="120" stroke="#333" stroke-width="1.5" />
+          <line x1="150" y1="18" x2="150" y2="222" stroke="#333" stroke-width="1.5" />
+          <polygon points="278,116 268,122 268,118" fill="#333" />
+          <polygon points="147,18 153,28 154,23" fill="#333" />
+          <text x="281" y="125" font-size="15" font-family="serif">Re</text>
+          <text x="155" y="16" font-size="15" font-family="serif">Im</text>
+          <text x="137" y="137" font-size="13" font-family="serif">0</text>
+          <line x1="150" y1="120" x2="240" y2="54" stroke="navy" stroke-width="2" />
+          <circle cx="240" cy="54" r="5" fill="navy" />
+          <line x1="240" y1="120" x2="240" y2="54" stroke="navy" stroke-width="1" stroke-dasharray="5,4" />
+          <line x1="150" y1="54" x2="240" y2="54" stroke="navy" stroke-width="1" stroke-dasharray="5,4" />
+          <text x="244" y="52" font-size="14" font-family="serif" fill="navy">z&#x2081; = 3 + 4i</text>
+          <text x="235" y="137" font-size="12" font-family="serif" fill="navy">3</text>
+          <text x="122" y="57" font-size="12" font-family="serif" fill="navy">4</text>
+          <line x1="150" y1="120" x2="82" y2="90" stroke="darkred" stroke-width="2" />
+          <circle cx="82" cy="90" r="5" fill="darkred" />
+          <line x1="82" y1="120" x2="82" y2="90" stroke="darkred" stroke-width="1" stroke-dasharray="5,4" />
+          <line x1="82" y1="90" x2="150" y2="90" stroke="darkred" stroke-width="1" stroke-dasharray="5,4" />
+          <text x="3" y="87" font-size="14" font-family="serif" fill="darkred">z&#x2082; = &#x2212;2 + i</text>
+          <text x="68" y="137" font-size="12" font-family="serif" fill="darkred">&#x2212;2</text>
+          <text x="154" y="94" font-size="12" font-family="serif" fill="darkred">1</text>
+          <text x="10" y="232" font-size="13" font-family="serif" fill="#555">z = a + bi</text>
+        </svg>
+        <p class="pic-caption">Рисунок 1 &ndash; Алгебраическая форма</p>
+      </div>
+
+      <div class="picture">
+        <svg width="300" height="240" xmlns="http://www.w3.org/2000/svg">
+          <line x1="30" y1="132" x2="278" y2="132" stroke="#333" stroke-width="1.5" />
+          <line x1="150" y1="18" x2="150" y2="222" stroke="#333" stroke-width="1.5" />
+          <polygon points="278,128 268,134 268,130" fill="#333" />
+          <polygon points="147,18 153,28 154,23" fill="#333" />
+          <text x="281" y="137" font-size="15" font-family="serif">Re</text>
+          <text x="155" y="16" font-size="15" font-family="serif">Im</text>
+          <text x="137" y="149" font-size="13" font-family="serif">0</text>
+          <line x1="150" y1="132" x2="248" y2="66" stroke="navy" stroke-width="2" />
+          <circle cx="248" cy="66" r="5" fill="navy" />
+          <path d="M 188,132 A 38,38 0 0,0 173,98" stroke="navy" stroke-width="1.5" fill="none" />
+          <text x="192" y="118" font-size="13" font-family="serif" fill="navy">&#x03c6;&#x2081;</text>
+          <text x="193" y="91" font-size="13" font-family="serif" fill="navy">r&#x2081; = 5</text>
+          <text x="252" y="63" font-size="14" font-family="serif" fill="navy">z&#x2081;</text>
+          <line x1="150" y1="132" x2="67" y2="96" stroke="darkred" stroke-width="2" />
+          <circle cx="67" cy="96" r="5" fill="darkred" />
+          <path d="M 188,132 A 38,38 0 0,0 114,106" stroke="darkred" stroke-width="1.5" fill="none"
+            stroke-dasharray="5,3" />
+          <text x="120" y="116" font-size="13" font-family="serif" fill="darkred">&#x03c6;&#x2082;</text>
+          <text x="73" y="107" font-size="13" font-family="serif" fill="darkred">r&#x2082;</text>
+          <text x="44" y="93" font-size="14" font-family="serif" fill="darkred">z&#x2082;</text>
+          <text x="5" y="232" font-size="12" font-family="serif" fill="#555">z = r&middot;(cos &#x03c6; + i&middot;sin
+            &#x03c6;)</text>
+        </svg>
+        <p class="pic-caption">Рисунок 2 &ndash; Тригонометрическая форма</p>
+      </div>
+
+      <div class="input">
+        <form>
+          <p>
+            <label>Форма:
+              <select id="formType">
+                <option value="algebraic">Алгебраическая</option>
+                <option value="trig">Тригонометрическая</option>
+              </select>
+            </label>
+            <input type="button" value="Показать" onclick="showForm()">
+          </p>
+
+          <p class="section-title">z<sub>1</sub>:</p>
+          <p>
+            <label id="lbl-z1-re">a<sub>1</sub> =
+              <input type="number" id="z1re" step="any">
+            </label>
+          </p>
+          <p>
+            <label id="lbl-z1-im">b<sub>1</sub> =
+              <input type="number" id="z1im" step="any">
+            </label>
+          </p>
+
+          <p class="section-title">z<sub>2</sub>:</p>
+          <p>
+            <label id="lbl-z2-re">a<sub>2</sub> =
+              <input type="number" id="z2re" step="any">
+            </label>
+          </p>
+          <p>
+            <label id="lbl-z2-im">b<sub>2</sub> =
+              <input type="number" id="z2im" step="any">
+            </label>
+          </p>
+
+          <p>
+            <span id="ops-label"><b>Операции:</b></span><br>
+            <select id="operations" size="4" multiple>
+              <option value="product">произведение</option>
+              <option value="quotient">частное</option>
+              <option value="sum">сумма</option>
+              <option value="diff">разность</option>
+            </select>
+          </p>
+
+          <p>
+            <input type="button" value="Вычислить" onclick="calculate()">
+            <input type="button" value="Очистить" onclick="clearData()">
+          </p>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="output"></div>
+
+  </div>
+
+
+
+  <script src="program.js"></script>
+</body>
+
+</html>
