@@ -1,0 +1,155 @@
+ .viz-section {
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }
+
+ .viz-toggle {
+     background: none;
+     border: 1px solid #aaa;
+     border-radius: 5px;
+     padding: 6px 14px;
+     font-size: 14px;
+     cursor: pointer;
+     color: #333;
+ }
+
+
+ .viz-controls {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 16px;
+     align-items: flex-end;
+     background: #f8f8f8;
+     padding: 14px 18px;
+     margin: 14px 0 16px;
+ }
+
+ .viz-control-group {
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+ }
+
+ .viz-control-group label {
+     font-size: 11px;
+     color: #777;
+     text-transform: uppercase;
+     letter-spacing: 0.04em;
+     font-weight: bold;
+ }
+
+ .viz-control-group select {
+     padding: 5px 10px;
+     border: 1px solid #ccc;
+     font-size: 13px;
+     background: #fff;
+     min-width: 160px;
+ }
+
+ .viz-count {
+     font-size: 13px;
+     align-self: flex-end;
+     padding-bottom: 4px;
+ }
+
+ #vizChart {
+     display: block;
+     width: 100%;
+ }
+
+ .viz-bar {
+     fill: #3b7dd8;
+     cursor: pointer;
+ }
+
+
+
+ .viz-line {
+     fill: none;
+     stroke: #3b7dd8;
+     stroke-width: 2.5;
+ }
+
+ .viz-dot {
+     fill: #3b7dd8;
+     cursor: pointer;
+ }
+
+
+
+ .viz-sdot {
+     fill-opacity: 0.65;
+     stroke-width: 0.8;
+     cursor: pointer;
+ }
+
+ .viz-sdot:hover {
+     fill-opacity: 1;
+ }
+
+ .viz-axis path,
+ .viz-axis line {
+     stroke: #ccc;
+ }
+
+ .viz-axis text {
+     fill: #555;
+     font-size: 11px;
+ }
+
+ .viz-grid line {
+     stroke: #ebebeb;
+     stroke-dasharray: 3, 3;
+ }
+
+ .viz-grid path {
+     stroke: none;
+ }
+
+ .viz-axlabel {
+     fill: #555;
+     font-size: 13px;
+     font-weight: 500;
+ }
+
+ .viz-barlabel {
+     font-size: 11px;
+     fill: #555;
+ }
+
+ .viz-legend {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px 18px;
+     font-size: 12px;
+     color: #555;
+     margin-bottom: 8px;
+ }
+
+ .viz-legend-item {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .viz-legend-dot {
+     width: 9px;
+     height: 9px;
+     border-radius: 50%;
+     flex-shrink: 0;
+ }
+
+ .viz-tooltip {
+     position: fixed;
+     background: rgba(20, 20, 20, 0.88);
+     color: #fff;
+     padding: 7px 11px;
+     border-radius: 5px;
+     font-size: 12px;
+     pointer-events: none;
+     opacity: 0;
+     transition: opacity 0.1s;
+     line-height: 1.5;
+     max-width: 210px;
+     z-index: 9999;
+ }

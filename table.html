@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Породы собак</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul type="none">
+        <li> <a href="index.html">Собачки</a></li>
+        <li><a href="table.html">Список собачек</a></li>
+    </ul>
+    <hr>
+
+    <div class="viz-section">
+        <button id="vizToggle" class="viz-toggle">▼ Показать визуализацию</button>
+
+        <div id="vizPanel" style="display:none;">
+            <div class="viz-controls">
+                <div class="viz-control-group">
+                    <label for="chartType">Тип диаграммы</label>
+                    <select id="chartType">
+                        <option value="bar">Столбчатая</option>
+                        <option value="line">Линейная</option>
+                        <option value="scatter">Точечная</option>
+                    </select>
+                </div>
+                <div class="viz-control-group">
+                    <label for="xField">Ось X</label>
+                    <select id="xField">
+                        <option value="size">Размер</option>
+                        <option value="activity">Активность</option>
+                        <option value="purpose">Назначение</option>
+                        <option value="coat">Тип шерсти</option>
+                        <option value="apartment">Квартира</option>
+                        <option value="country">Страна</option>
+                    </select>
+                </div>
+                <div class="viz-control-group" id="yFieldGroup" style="display:none;">
+                    <label for="yField">Ось Y</label>
+                    <select id="yField">
+                        <option value="activity">Активность</option>
+                        <option value="size">Размер</option>
+                        <option value="purpose">Назначение</option>
+                        <option value="coat">Тип шерсти</option>
+                        <option value="apartment">Квартира</option>
+                    </select>
+                </div>
+                <span id="vizCount" class="viz-count"></span>
+            </div>
+
+            <div id="vizLegend" class="viz-legend"></div>
+            <svg id="vizChart"></svg>
+            <div id="vizTooltip" class="viz-tooltip"></div>
+        </div>
+    </div>
+
+
+    <div class="forms-row">
+
+        <div class="panel">
+            <div class="panel-title">Фильтр</div>
+            <form id="filter">
+                <p>
+                    <label for="structure">Название:</label>
+                    <input type="text" id="structure">
+                </p>
+                <p>
+                    <label for="category">Тип шерсти:</label>
+                    <input type="text" id="category">
+                </p>
+                <p>
+                    <label for="country">Назначение:</label>
+                    <input type="text" id="country">
+                </p>
+                <p>
+                    <label for="city">Размер:</label>
+                    <input type="text" id="city">
+                </p>
+
+
+                <div class="btn-group">
+                    <input type="button" id="findBtn" value="Найти">
+                    <input type="button" id="clearBtn" value="Очистить фильтры">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="sort-section">
+        <h3>Сортировка</h3>
+
+        <div class="sort-level">
+            <label>Уровень 1:
+                <select id="sort1Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="size">Размер</option>
+                    <option value="activity">Активность</option>
+                </select>
+                <select id="sort1Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="sort-level">
+            <label>Уровень 2:
+                <select id="sort2Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="size">Размер</option>
+                    <option value="activity">Активность</option>
+                </select>
+                <select id="sort2Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="sort-level">
+            <label>Уровень 3:
+                <select id="sort3Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="size">Размер</option>
+                    <option value="activity">Активность</option>
+                </select>
+                <select id="sort3Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Название</th>
+                <th>Размер</th>
+                <th>Тип шерсти</th>
+                <th>Назначение</th>
+                <th>Активность</th>
+                <th>Квартира</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+
+
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="libs/d3.v7.js"></script>
+    <script src="JavaScript/viz.js"></script>
+</body>
+
+</html>
