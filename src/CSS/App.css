@@ -1,0 +1,120 @@
+.App {
+  width: 100%;
+}
+
+fieldset {
+  margin: 8px 0;
+  padding: 10px;
+}
+
+label {
+  display: inline-block;
+  margin: 4px 0;
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+  margin-left: 6px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 2px 4px;
+}
+
+.pagination {
+  margin: 12px 0;
+}
+
+.page-number {
+  margin-right: 12px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.page-number.active {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.sort-row {
+  margin: 4px 0;
+}
+
+.sort-row span {
+  display: inline-block;
+  width: 80px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+/* ── Chart styles ── */
+
+.chart-form-options {
+  margin-top: 8px;
+}
+
+.chart-hint {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.chart-wrapper {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.chart-title {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-count {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #888;
+}
+
+.chart-empty {
+  margin-top: 16px;
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  color: #888;
+  font-style: italic;
+}
+
+.chart-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.chart-tooltip strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
